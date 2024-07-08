@@ -4,9 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carta de Vinho</title>
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+<style>
+.tituloTom{
+  margin-top: 36px;
+  text-align: center;
+  color: #000;
+  font-family: "VT323", monospace;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+.linkTom{
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.linkTom:hover{
+  color: #208842;
+  font-size: 0.92rem;
+}
+
+
+</style>
 <body>
 
 <div class="container mt-5">
@@ -26,12 +48,13 @@
   </div>
 </div>
 
-<!-- JavaScript -->
+
+
 <script>
   document.getElementById('downloadBtn').addEventListener('click', function() {
-    // Simula o download do arquivo PDF
+
     var link = document.createElement('a');
-    link.href = 'CARTA DE VINHO DIGITAL.pdf'; // Altere o caminho conforme necessário
+    link.href = 'CARTA DE VINHO DIGITAL.pdf';
     link.download = 'Carta_de_Vinho_Digital.pdf';
     document.body.appendChild(link);
     link.click();
@@ -39,5 +62,6 @@
   });
 </script>
 
+<footer><h2 class="tituloTom">Desenvolvido por <a class="linkTom" href="https://www.instagram.com/tomholanda/">TomHolanda</a></h2></footer>
 </body>
 </html>
