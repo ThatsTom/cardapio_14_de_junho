@@ -27,7 +27,6 @@
   font-size: 0.92rem;
 }
 
-
 </style>
 <body>
 
@@ -48,11 +47,28 @@
   </div>
 </div>
 
-
+<!-- Modal -->
+<div class="modal fade" id="catalogModal" tabindex="-1" role="dialog" aria-labelledby="catalogModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="catalogModalLabel">Aviso Importante</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        O catálogo digital será descontinuado a partir do dia 20/08/2024.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   document.getElementById('downloadBtn').addEventListener('click', function() {
-
     var link = document.createElement('a');
     link.href = 'CARTA DE VINHO DIGITAL.pdf';
     link.download = 'Carta_de_Vinho_Digital.pdf';
@@ -60,7 +76,16 @@
     link.click();
     document.body.removeChild(link);
   });
+
+  // Mostrar o modal automaticamente ao carregar a página
+  window.onload = function() {
+    $('#catalogModal').modal('show');
+  };
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <footer><h2 class="tituloTom">Desenvolvido por <a class="linkTom" href="https://www.instagram.com/tomholanda/">TomHolanda</a></h2></footer>
 </body>
